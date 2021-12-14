@@ -1,0 +1,21 @@
+# action.yml
+name: 'qiye wechat message sender'
+
+inputs:
+  msgtype:
+    description: '消息类型'
+    required: true
+  content:
+    description: '消息内容'
+    required: true
+  mentioned_list:
+    description: 'userid列表'
+    required: false
+  mentioned_mobile_list:
+    description: '手机号列表'
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
